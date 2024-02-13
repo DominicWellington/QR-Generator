@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background: url(image/2024_02_02_10_14_IMG_2483.JPG);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    width: 400px;
+    padding: 25px 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.4);
+}
+
+.container h3{
+    font-weight: 600;
+    font-family: 15px;
+    margin-bottom: 10px;
+}
+
+.container input{
+    width: 100%;
+    height: 50px;
+    outline: none;
+    padding: 10px;
+    margin: 10px 0px 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.container button{
+    width: 100%;
+    height: 50px;
+    margin: 20px 0px;
+    border: none;
+    outline: none;
+    box-sizing: 0px 10px 10px rgba(0,0,0,0.1);
+    background: rgb(238, 68, 68);
+    color:whitesmoke;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+#qrCodeBox{
+    width: 200px;
+    border-radius: 5px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 3s;
+}
+
+#qrCodeBox img{
+    width: 100%;
+    padding: 10px;
+}
+
+#qrCodeBox.show-img{
+    max-height: 300px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+}
+
+.error{
+    animation: shake 0.1s linear 1000;
+}
+
+@keyframes shake{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-2px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(2px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@media(max-width:600px){
+   .container{
+    width: 300px;
+    margin-top: 50px auto;
+   } 
+}
